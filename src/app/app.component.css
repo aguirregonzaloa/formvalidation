@@ -1,0 +1,90 @@
+h3{
+	font-size: 5rem;
+	text-align: center;
+}
+
+li{
+    font-size: 2rem;
+}
+
+.form{
+	margin-top: 5rem;
+	margin-left: 10rem;
+}
+
+.form-group{
+	font-size: 3rem;
+	font-weight: 400;
+	color: grey;
+}
+
+.form-control{
+	/*padding: 1rem 1rem;*/
+	margin: 1rem 5rem;
+    font-size: 3rem;
+}
+
+.alert{
+	background-color: #EAC9C1;
+    border: 1px solid  #EA8369;
+}
+
+.alert-danger{
+	color: #EA8369;
+    font-size: 2.5rem;
+}
+
+
+.btn,
+.btn:link,
+.btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 2rem;
+
+        /*Change for the <button> element*/
+        border: none;
+        cursor: pointer;
+
+        -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+    
+.btn:hover {
+        transform: translateY(-4px);
+        -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.btn::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+}
+    
+.btn:active,
+.btn:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+}
+
+
+.btn-primary {
+	color: white;
+	background-color: blue;
+
+}
+
+.btn-primary:hover{
+	color: blue;
+	background-color: white;
+}
+
+.btn-primary:disabled{
+    color: black;
+    background-color: grey;
+}

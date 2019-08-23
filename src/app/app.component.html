@@ -1,0 +1,54 @@
+
+    <h3>Add new Item:</h3>
+
+    <form [formGroup]="Form" (ngSubmit)="onSubmit()" class="form">
+
+      <div class="form-group">
+        <label >Name:</label>
+        <input type="text"  pattern="[a-zA-Z ]*" name="name" class="form-control" placeholder="Name's Item" formControlName="name" required>
+        <span *ngIf="!Form.get('name').valid && Form.get('name').touched"
+        class="help-block alert alert-danger">
+          Name is not validated!!!
+        </span>
+      </div>
+      <div class="form-group">
+        <label >Amount:</label>
+        <input  type="text" pattern="[0-9]*"name="amount" class="form-control" placeholder="Set amount" formControlName="amount" required>
+        <span *ngIf="!Form.get('amount').valid && Form.get('amount').touched"
+        class="help-block alert alert-danger">
+          Amount is not validated!!!
+        </span>
+      </div>
+      <div class="form-group">
+        <label >Price:</label>
+        <input  class="form-control" pattern="([0-9]*[.])?[0-9]*" name="price" formControlName="price" placeholder="price to sell" required>
+        <span *ngIf="!Form.get('price').valid && Form.get('price').touched"
+        class="help-block alert alert-danger">
+         Price is not validated!!!
+        </span>
+      </div>
+      <div class="form-group">
+        <label >Cost:</label>
+        <input  class="form-control" pattern="([0-9]*[.])?[0-9]*" name="cost" formControlName="cost" placeholder="Cost to buy" required>
+        <span *ngIf="!Form.get('cost').valid && Form.get('cost').touched"
+        class="help-block alert alert-danger">
+          Cost is not validated!!!
+        </span>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!Form.valid"> 
+        Send
+      </button>
+    </form>
+    <br>
+    <div *ngIf="item.name!==null">
+      <ul>
+      <li>{{item.name}}</li>
+      <li>{{item.amount}}</li>
+      <li>{{item.price}}</li>
+      <li>{{item.cost}}</li>
+      </ul>
+    </div>
+
+
+
+
